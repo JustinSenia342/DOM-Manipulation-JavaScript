@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<!--Justin Senia-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>HW0331.html</title>
+</head>
+
+<body>
+	<div id="div1">
+		<p id="first">
+		First firstly one 1 uno ichi only solitary point
+		</p>
+		<p id="second">
+		Second secondly two 2 dos ni secondary duo line
+		</p>
+		<p id="third">
+		Third Triple three 3 tres san triangle
+		</p>
+		<p id="fourth">
+		Fourth quad four 4 cuatro yon square
+		</p>
+	</div>
+	
+	<button type="button" onClick="RotateDom()"> Rotate Text </button>
+	
+	<script>
+		function RotateDom(){
+			var pTags = document.getElementsByTagName("p");
+			
+			var para = document.createElement("p");
+			var node = document.createTextNode(pTags[3].innerHTML);
+			para.appendChild(node);
+			
+			var parent = document.getElementById("div1");
+			child = pTags[3];
+			parent.removeChild(child);
+			
+			var element = document.getElementById("div1");
+			var child = pTags[0];
+			element.insertBefore(para,child);
+		}
+	</script>
+</body>
+</html>
