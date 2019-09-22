@@ -2,8 +2,11 @@
 <html>
 <!--Justin Senia-->
 <head>
+
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>RotateDomJavascript.html</title>
+	<title>RotateDomJavascript</title>
+	<script src='js/ProtoFunctions.js'> </script>
+	
 </head>
 
 <body>
@@ -25,21 +28,7 @@
 	<button type="button" onClick="RotateDom()"> Rotate Text </button>
 	
 	<script>
-		function RotateDom(){
-			var pTags = document.getElementsByTagName("p");
-			
-			var para = document.createElement("p");
-			var node = document.createTextNode(pTags[3].innerHTML);
-			para.appendChild(node);
-			
-			var parent = document.getElementById("div1");
-			child = pTags[3];
-			parent.removeChild(child);
-			
-			var element = document.getElementById("div1");
-			var child = pTags[0];
-			element.insertBefore(para,child);
-		}
+		RotateDom();
 	</script>
 </body>
 </html>
